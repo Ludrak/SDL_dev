@@ -53,3 +53,66 @@ void	Renderer::apply()
 	SDL_RenderPresent(this->renderer);
 }
 
+
+//
+//	GRAPHICS UTILS
+//
+
+
+//	COLORS	
+
+//	SET_COLOR (r, g, b)
+//	- Sets the color of the renderer
+void	Renderer::set_color(int r, int g, int b)
+{
+	SDL_SetRenderDrawColor(this->renderer, r, g, b, 255);
+}
+
+//	SET_COLOR (r, b, b, a)
+//	- Sets the color of the renderer with alpha
+void	Renderer::set_color(int r, int g, int b, int a)
+{
+	SDL_SetRenderDrawColor(this->renderer, r, g, b, a);
+}
+
+//	SET_COLOR (l)
+//	- Sets the color of the renderer with a shade of gray
+void	Renderer::set_color(int l)
+{
+	SDL_SetRenderDrawColor(this->renderer, l, l, l, 255);
+}
+
+//	SET_COLOR (l, a)
+//	- Sets the color of the renderer with a shade of gray and alpha.
+void	Renderer::set_color(int l, int a)
+{
+	SDL_SetRenderDrawColor(this->renderer, l, l, l, a);
+}
+
+//	GEOMETRY
+
+//	DRAW_RECT
+//	- Draws a rectangle on the screen
+void	Renderer::draw_rect(int x, int y, int w, int h)
+{
+	SDL_Rect rect;
+
+	rect.x = x;
+	rect.y = y;
+	rect.w = w;
+	rect.h = h;
+	SDL_RenderDrawRect(this->renderer, &rect);
+}
+
+//	FILL RECT
+//	- Fills a rectangle on the screen
+void	Renderer::fill_rect(int x, int y, int w, int h)
+{
+	SDL_Rect rect;
+
+	rect.x = x;
+	rect.y = y;
+	rect.w = w;
+	rect.h = h;
+	SDL_RenderFillRect(this->renderer, &rect);
+}

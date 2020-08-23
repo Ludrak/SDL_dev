@@ -4,7 +4,6 @@
 
 int	main(int ac, char **av)
 {
-
 	//SDL2 init
 	SDL_Init(SDL_INIT_VIDEO);
 
@@ -18,21 +17,11 @@ int	main(int ac, char **av)
 	renderer.create_renderer(window.get_window());
 	window.set_renderer(&renderer);
 	renderer.clear(100, 149, 237);
+
+	renderer.set_color(255, 0, 0);
+	renderer.fill_rect(0, 0, 100, 100);
 	renderer.apply();
-
-
-	//Render Rectangle Setup
-//	SDL_Rect	rect;
-//	rect.x = 0;
-//	rect.y = 0;
-//	rect.w = 100;
-//	rect.h = 200;
-//	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-//	SDL_RenderFillRect(renderer, &rect);
-
-	//show renderer components
-//	SDL_RenderPresent(renderer);
-
+	
 	//Game Loop
 	while (1)
 	{

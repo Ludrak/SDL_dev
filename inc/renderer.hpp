@@ -19,6 +19,16 @@ class Renderer
 
 		void	draw();
 		void	apply();
+		
+		//COLOR
+		void	set_color(int r, int g, int b);
+		void	set_color(int r, int g, int b, int a);
+		void	set_color(int l);
+		void	set_color(int l, int a);	
+	
+		//RECTANLGE
+		void	draw_rect(int x, int y, int w, int h);
+		void	fill_rect(int x, int y, int w, int h);
 };
 
 #endif
