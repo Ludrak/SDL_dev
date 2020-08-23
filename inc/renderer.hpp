@@ -12,7 +12,7 @@ class Renderer
 	private:
 		SDL_Renderer	*renderer;
 	public:
-		int	create_renderer(SDL_Window window);
+		int	create_renderer(SDL_Window *window);
 
 		void	clear(int r, int g, int b);
 		void	clearw();

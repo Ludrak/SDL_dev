@@ -16,7 +16,7 @@ int	main(int ac, char **av)
 	//Renderer setup
 	Renderer renderer = Renderer();
 	renderer.create_renderer(window.get_window());
-	window.set_renderer(renderer);
+	window.set_renderer(&renderer);
 	renderer.clear(100, 149, 237);
 	renderer.apply();
 
